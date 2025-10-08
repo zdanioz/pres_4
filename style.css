@@ -1,0 +1,522 @@
+/* Stili Generali */
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* stile del font */
+@font-face {
+    font-family: 'ChunkoBoldDemo';
+    src: url('fonts/ChunkoBoldDemo.woff2') format('woff2'),
+         url('fonts/ChunkoBoldDemo.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NectoMono-Regular';
+    src: url('fonts/NectoMono-Regular.woff2') format('woff2'),
+         url('fonts/NectoMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Tipografia */
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'ChunkoBoldDemo', sans-serif;
+    font-size: 120px;
+    line-height: 0.9;
+    position: absolute;
+    top: -30px; 
+    right: -50px;
+}
+
+h2 {
+    font-size: 60px;
+    line-height: 1;
+}
+
+p {
+    font-family: 'NectoMono-Regular', monospace;
+    font-size: 1.1em;
+}
+
+.presentation-tag {
+    font-family: 'ChunkoBoldDemo', sans-serif;
+    color: #FF4500;
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 1.8em;
+    position: absolute;
+    top: -725px; 
+    right: -180px;
+    transform: rotate(0deg); 
+    z-index: 10;
+}
+
+/* Hero Section (Immagine 1) */
+.hero-section {
+    min-height: 100vh;
+    background-color: #f0f0f0; 
+    color: #333;
+    position: relative;
+    padding: 0;
+}
+
+.hero-section h1 {
+    color: #000;
+    margin-bottom: 20px;
+    z-index: 5;
+    position: relative; 
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 45px;
+    left: 120px;
+    width: 80%;
+    height: auto;
+    text-align: left;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    width: 100%; 
+    height: 100%;
+    background-image: url('img/firma_1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    clip-path: url(#forma-corretta);
+}
+
+/* Details Section (Immagine 2) */
+.section-grey {
+    background-image: url('img/sfondo_chiaro.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #e0e0e0; 
+}
+
+.title-large-black {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.title-large-orange {
+    color: #FF4500; 
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.info-grid {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    height: 400px;
+}
+
+.info-card {
+    background-color: #FF4500; 
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    width: 420px;
+    height: 180px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-card:nth-child(1) { top: 20px; left: 0; }
+.info-card:nth-child(2) { top: 20px; left: 480px; }
+.info-card:nth-child(3) { top: 230px; left: 0; }
+.info-card:nth-child(4) { top: 230px; left: 480px; }
+
+.info-card .year {
+    font-family: 'ChunkoBoldDemo', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
+.info-card.info-card-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Info Section (Immagine 3) */
+.section-purple {
+    background-color: #4B0082; 
+    color: white;
+    text-align: left;
+}
+
+.section-purple .container.two-columns {
+    height: 500px;
+}
+
+.column-left {
+    position: absolute;
+    top: 250px;
+    left: 10px;
+    width: 350px;
+    text-align: center; 
+}
+
+.column-right {
+    position: absolute;
+    top: 100px;
+    left: 550px;
+    width: 750px;
+}
+
+.section-purple .column-left .title-large-white {
+    font-size: 90px;
+    text-align: left; 
+    margin: -125px  -100px ; 
+    max-width: 90%; 
+    line-height: 1;
+}
+
+.main-text-white {
+    font-family: 'NectoMono-Regular', monospace;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.boxes-container {
+    margin-top:50px;
+    position: relative;
+    height: 200px;
+}
+
+.box-34-purple, .box-34-orange {
+    background-color: white;
+    color: #4B0082;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3em;
+    position: absolute;
+    width: 365px;
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.boxes-container .box-34-purple:nth-child(1) { top: 0; left: -640px; width: 1390px; }
+.boxes-container .box-34-purple:nth-child(2) { top: 120px; left: -640px; width: 453px; }
+.boxes-container .box-34-orange:nth-child(3) { top: 120px; left: -167px; width: 917px; }
+
+.box-34-orange {
+    background-color: #FF4500; 
+    color: white;
+}
+
+.box-34-purple .number, .box-34-orange .number {
+    font-size: 3em;
+    color: #FF4500; 
+    line-height: 0.8;
+}
+
+.box-34-orange .number {
+    color: white; 
+}
+
+.tag-booh {
+    background-color: #000;
+    border-radius:10px;
+    color: white;
+    padding: 5px 15px;
+    font-family: 'ChunkoBoldDemo', sans-serif;
+    font-size: 1em;
+    position: absolute;
+    bottom: 45px;
+    right: 15px;
+    transform: rotate(5deg);
+}
+
+/* Full Text Section (Immagine 4) */
+.section-orange-bg {
+    background-color: #FF4500;
+    color: white;
+}
+
+.section-orange-bg .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+}
+
+.giant-text-white {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 84px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: white;
+    max-width: 900px; 
+    position: relative;
+}
+
+.highlight-blue {
+    background-color: #00BFFF; 
+    color: black;
+    padding: 5px 10px;
+    transform: rotate(-5deg);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.highlight-green {
+    background-color: #9ACD32; 
+    color: black;
+    padding: 5px 10px;
+    transform: rotate(3deg);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px; 
+}
+
+/* Content Section (Immagine 5) */
+.section-lime-bg {
+    background-color: #ADFF2F; 
+    color: black;
+}
+
+.giant-text-black {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 84px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: black;
+    margin: 0 auto 60px auto;
+    text-align: left;
+    max-width: 900px;
+}
+
+.content-cards-row {
+    position: relative;
+    width: 100%;
+    max-width: 940px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.content-card-number {
+    background-color: #FF4500; 
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 900px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2); /* MODIFICATO: Aggiunta ombra */
+}
+
+.small-text-card {
+    font-family: 'NectoMono-Regular', monospace;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: white;
+}
+
+.large-number {
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Footer Section (Immagine 6) */
+.footer-section {
+    background-color: #00BFFF; 
+    color: white;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-section .section-title {
+    color: black; /* MODIFICATO: Colore del titolo */
+    font-size: 90px;
+    position: absolute;
+    top: 200px;
+    left: 200px; /* MODIFICATO: Allineamento laterale al box */
+    z-index: 10;
+    line-height: 1;
+    text-align: left;
+}
+
+.footer-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%; 
+    height: 100%;
+    background-image: url(''); 
+    background-size: cover;
+    background-position: center top; 
+    z-index: 1;
+}
+
+.footer-overlay {
+    position: absolute;
+    bottom: 50px;
+    left: 200px; 
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 40px;
+    text-align: left;
+    max-width: 550px;
+    border-radius: 10px;
+}
+
+.boh-tag {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5em;
+    display: inline-block;
+    position: absolute;
+    top: -30px; 
+    left: -20px;
+    transform: rotate(-8deg);
+    z-index: 10;
+}
+
+.footer-text {
+    font-family: 'NectoMono-Regular', monospace;
+    font-size: 1em;
+    line-height: 1.7;
+    color: #ddd;
+    margin-top: 40px;
+    max-width: 500px;
+}
+
+/* ===== STILI BARRA DI NAVIGAZIONE ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navigation-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #FF4500;
+    padding: 2px 15px;
+    margin: 1px 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'NectoMono-Regular', sans-serif;
+    font-size: 1.0em;
+    text-transform: lowercase;
+    transition: transform 0.5s ease-in-out, background-color 0.2s;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    background-color: #5f00a8;
+}
+
+/* ===== CORREZIONE PER L'ANCORA ===== */
+.section {
+    scroll-margin-top: 90px;
+}
+
+/* ================================================= */
+/* STILE PER IL BOX OBIETTIVI DUPLICATO IN ALTO      */
+/* ================================================= */
+.duplicated-overlay {
+    position: absolute;
+    top: 100px;
+    right: 150px; 
+    left: auto;
+    bottom: auto;
+    z-index: 6;
+    max-width: 450px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.duplicated-overlay .boh-tag {
+    left: auto;
+    right: -20px;
+    transform: rotate(8deg);
+}
+
+.duplicated-overlay .footer-text {
+    /* MODIFICATO: Rimossa la regola sulla dimensione per renderla uguale all'altro testo */
+    margin-top: 20px;
+    color: #ddd;
+}
